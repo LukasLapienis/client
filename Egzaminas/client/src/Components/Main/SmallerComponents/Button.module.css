@@ -31,9 +31,31 @@
   color: red;
   background-color: transparent;
   font-weight: 600;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .edit {
   color: green;
+}
+
+.submit {
+  width: 200px;
+  display: inline-block;
+  background-color: #5ec576;
+  font-size: 1.1rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 16px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.submit:hover {
+  background-color: #4bbb7d;
+}
+.submit:active {
+  background-color: #2e975d;
+  transition: 0.3s;
 }

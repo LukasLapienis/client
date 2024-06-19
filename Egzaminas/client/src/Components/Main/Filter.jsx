@@ -39,9 +39,7 @@ const Filter = ({
   return (
     <>
       <h1>
-        Welcome to the
-        <span className={styles.highlight}> AdVantage </span> page, create and
-        upload your ads completely for free !
+        Welcome to the AdsForAll page !
       </h1>
       <div className={styles.container}>
         <div>

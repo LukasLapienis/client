@@ -16,6 +16,7 @@
 .singleAd {
   display: flex;
   max-width: 500px;
+  height: 250px;
   position: relative;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -35,7 +36,7 @@
   cursor: pointer;
   position: absolute;
   right: 5%;
-  top: 10%;
+  top: 15%;
 }
 
 .imgContainer {

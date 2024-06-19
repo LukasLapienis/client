@@ -88,7 +88,7 @@ const Likes = ({ userData, ad, likedAds, setLikedAds, setAds }) => {
       style={{
         position: 'absolute',
         right: '24px',
-        top: '24px',
+        top: '30px',
       }}
     >
       {userData.token ? (

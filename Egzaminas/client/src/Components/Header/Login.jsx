@@ -110,14 +110,15 @@ const Login = ({ closeModal, BASE_URL, handleLoginSuccess, setUserRole, openSign
               {showPassword ? <FaEyeSlash /> : <FaEye />}
             </i>
           </div>
-          <button className={styles.btn}>Login</button>
-        </form>
-        <div className={styles.alreadyUser}>
+          <Button type="submit">Login</Button>
+          <div className={styles.alreadyUser}>
           <p>Don't have an account ?</p>
           <Button onClick={openSignupModal} type="show">
             Register
           </Button>
         </div>
+        </form>
+ 
       </div>
       <div className={styles.overlay}></div>
     </>

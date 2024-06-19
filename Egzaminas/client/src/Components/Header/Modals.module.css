@@ -9,7 +9,7 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  max-width: 50rem;
+  max-width: 90%;
   background-color: #f3f3f3;
   padding: 5rem 6rem;
   box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
@@ -140,6 +140,7 @@
 }
 
 .comment {
+  position: relative;
   border: 1px solid gray;
   padding: 5px;
   border-radius: 5px;
@@ -152,7 +153,10 @@
 .alreadyUser {
   display: flex;
   gap: 12px;
+}
+
+.delete {
   position: absolute;
-  right: 17%;
-  bottom: 12%;
+  top: 5px;
+  right: 2px;
 }

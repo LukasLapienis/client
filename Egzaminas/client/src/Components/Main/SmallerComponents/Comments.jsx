@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import styles from '../../Header/Modals.module.css';
 import axios from 'axios';
+import Button from './Button';
 
 const Comments = ({ setIsCommentsOpen, adToComment, setAds }) => {
   const [allComments, setAllComments] = useState([]);
@@ -81,6 +82,35 @@ const Comments = ({ setIsCommentsOpen, adToComment, setAds }) => {
     setComment('');
   };
 
+  const handleDeleteComment = async (id) => {
+    if (!userData) {
+      alert('login to delete Ad');
+      return;
+    }
+    try {
+      await axios.delete(`http://localhost:5000/api/comments/${id}`, {
+        headers: {
+          Authorization: `Bearer ${userData.token}`,
+          'Content-Type': 'application/json',
+        },
+      });
+      alert('Comment deleted successfully');
+      setAllComments((prev) => [
+        ...prev,
+        {
+          comment: comment,
+          adId: adToComment._id,
+          _id: timestampId,
+          user: userData,
+        },
+      ]);
+      // setAds((prevAds) => prevAds.filter((ad) => ad._id !== id));
+    } catch (error) {
+      console.error('Error deleting comment:', error);
+      alert('Failed to delete comment');
+    }
+  };
+
   return (
     <>
       <div className={styles.modal}>
@@ -96,6 +126,18 @@ const Comments = ({ setIsCommentsOpen, adToComment, setAds }) => {
               <div key={comment._id} className={styles.comment}>
                 <p className={styles.username}>{comment.user.username}</p>
                 <p> {comment.comment}</p>
+                {(userData._id === comment.user._id) && (
+                  <p className={styles.delete}>
+                    <Button
+                        type="delete"
+                        onClick={() => {
+                          handleDeleteComment(comment._id);
+                        }}
+                      >
+                        &times;
+                    </Button>
+                  </p>
+                    )}
               </div>
             ))
           ) : (
@@ -114,9 +156,9 @@ const Comments = ({ setIsCommentsOpen, adToComment, setAds }) => {
                 required
               />
             </div>
-            <button type="submit" className={styles.btn}>
+            <Button type="submit">
               Submit
-            </button>
+            </Button>
           </form>
         )}
       </div>
