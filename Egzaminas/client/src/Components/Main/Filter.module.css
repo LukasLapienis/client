@@ -13,18 +13,18 @@
   border-radius: 14px;
   border: 1px solid #333;
   margin-right: 12px;
-  background-color: #d7ffe9;
+  background-color: #979ed3;
 }
 
 .container select {
   padding: 6px;
   border: 1px solid #333;
   border-radius: 14px;
-  background-color: #d7ffe9;
+  background-color: #979ed3;
 }
 
 .container option {
-  background-color: #d7ffe9;
+  background-color: #979ed3;
 }
 
 h1 {
