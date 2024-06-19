@@ -28,7 +28,7 @@ const Footer = () => {
       <img src={logo} alt="Logo" className={styles.footerLogo} />
       <p className={styles.footerCopyright}>
         &copy; Copyright by
-        <span className={styles.footerBrand}> AdVantage</span>. All rights
+        <span className={styles.footerBrand}> AdsForAll</span>. All rights
         reserved
       </p>
     </footer>

@@ -12,7 +12,7 @@
 
 .show {
   font-weight: 600;
-  background-color: #5ec576;
+  background-color: #979ed3;
   letter-spacing: 1px;
   border: none;
   border-radius: 16px;
@@ -20,10 +20,10 @@
 }
 
 .show:hover {
-  background-color: #4bbb7d;
+  background-color: #6b73b4;
 }
 .show:active {
-  background-color: #2e975d;
+  background-color: #0d0f20;
   transition: 0.3s;
 }
 
@@ -41,7 +41,7 @@
 .submit {
   width: 200px;
   display: inline-block;
-  background-color: #5ec576;
+  background-color: #979ed3;
   font-size: 1.1rem;
   font-family: inherit;
   font-weight: 500;
@@ -53,9 +53,9 @@
 }
 
 .submit:hover {
-  background-color: #4bbb7d;
+  background-color: #6b73b4;
 }
 .submit:active {
-  background-color: #2e975d;
+  background-color: #0d0f20;
   transition: 0.3s;
 }

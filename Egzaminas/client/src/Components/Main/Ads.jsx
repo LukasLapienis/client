@@ -178,12 +178,15 @@ const Ads = ({
                     Likes <FaHeart className={styles.likeNum} />:
                     <span> {ad.likes.length}</span>
                   </p>
+                  {userData.token &&
                   <p
-                    onClick={() => handleComments(ad._id)}
-                    className={styles.comments}
-                  >
-                    Comments: <span>{ad.comments.length}</span>
-                  </p>
+                  onClick={() => handleComments(ad._id)}
+                  className={styles.comments}
+                >
+                  Comments: <span>{ad.comments.length}</span>
+                </p>
+                  }
+
                 </div>
               </div>
             </div>

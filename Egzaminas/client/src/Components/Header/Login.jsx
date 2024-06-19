@@ -85,8 +85,7 @@ const Login = ({ closeModal, BASE_URL, handleLoginSuccess, setUserRole, openSign
           &times;
         </button>
         <h2 className={styles.modalHeader}>
-          Please login to your <br />
-          <span className={styles.highlight}>AdVantage </span>
+          Please login to your AdsForAll
           account
         </h2>
         <form className={styles.modalForm} onSubmit={handleSubmit}>
@@ -112,10 +111,10 @@ const Login = ({ closeModal, BASE_URL, handleLoginSuccess, setUserRole, openSign
           </div>
           <Button type="submit">Login</Button>
           <div className={styles.alreadyUser}>
-          <p>Don't have an account ?</p>
-          <Button onClick={openSignupModal} type="show">
-            Register
-          </Button>
+            <p>Don't have an account ?</p>
+            <Button onClick={openSignupModal} type="show">
+                Register
+              </Button>
         </div>
         </form>
  

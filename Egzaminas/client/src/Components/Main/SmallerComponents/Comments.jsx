@@ -95,16 +95,7 @@ const Comments = ({ setIsCommentsOpen, adToComment, setAds }) => {
         },
       });
       alert('Comment deleted successfully');
-      setAllComments((prev) => [
-        ...prev,
-        {
-          comment: comment,
-          adId: adToComment._id,
-          _id: timestampId,
-          user: userData,
-        },
-      ]);
-      // setAds((prevAds) => prevAds.filter((ad) => ad._id !== id));
+      setAllComments((prev) => prev.filter((comment) => comment._id !== id))
     } catch (error) {
       console.error('Error deleting comment:', error);
       alert('Failed to delete comment');
@@ -126,7 +117,8 @@ const Comments = ({ setIsCommentsOpen, adToComment, setAds }) => {
               <div key={comment._id} className={styles.comment}>
                 <p className={styles.username}>{comment.user.username}</p>
                 <p> {comment.comment}</p>
-                {(userData._id === comment.user._id) && (
+                {console.log(comment)}
+                {(userData._id === comment.user._id || userData._id === adToComment.user._id) && (
                   <p className={styles.delete}>
                     <Button
                         type="delete"

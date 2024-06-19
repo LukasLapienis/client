@@ -122,9 +122,7 @@ const Registration = ({ closeModal, BASE_URL, openLoginModal }) => {
           &times;
         </button>
         <h2 className={styles.modalHeader}>
-          Open your <br />
-          <span className={styles.highlight}>AdsForAll </span>
-          account in just 1 minute
+          Open your AdsForAll account
         </h2>
         <form className={styles.modalForm}>
           <label className={styles.label}>Username</label>
@@ -168,7 +166,7 @@ const Registration = ({ closeModal, BASE_URL, openLoginModal }) => {
               {showPassword2 ? <FaEyeSlash /> : <FaEye />}
             </i>
           </div>
-          <button className={styles.btn}>Register</button>
+          <Button type="submit">Register</Button>
 
           {errorPassowrd && (
             <Message style={{ color: "red" }}>
@@ -180,13 +178,14 @@ const Registration = ({ closeModal, BASE_URL, openLoginModal }) => {
               ❌ User is already exists !
             </Message>
           )}
-        </form>
-        <div className={styles.alreadyUser}>
+                  <div className={styles.alreadyUser}>
           <p>Already user ?</p>
           <Button onClick={openLoginModal} type="show">
             Login
           </Button>
         </div>
+        </form>
+
       </div>
       <div className={styles.overlay}></div>
     </>
