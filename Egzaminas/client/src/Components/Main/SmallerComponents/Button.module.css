@@ -1,0 +1,39 @@
+.btn {
+  color: inherit;
+  text-transform: uppercase;
+  padding: 6px 12px;
+  font-family: inherit;
+  font-size: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+
+.show {
+  font-weight: 600;
+  background-color: #5ec576;
+  letter-spacing: 1px;
+  border: none;
+  border-radius: 16px;
+  margin-left: 6px;
+}
+
+.show:hover {
+  background-color: #4bbb7d;
+}
+.show:active {
+  background-color: #2e975d;
+  transition: 0.3s;
+}
+
+.delete {
+  color: red;
+  background-color: transparent;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+.edit {
+  color: green;
+}

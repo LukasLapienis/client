@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 50rem;
+  background-color: #f3f3f3;
+  padding: 5rem 6rem;
+  box-shadow: 0 4rem 6rem rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  transition: all 0.5s;
+}
+
+.btnCloseModal {
+  font-family: inherit;
+  color: inherit;
+  position: absolute;
+  top: 0.5rem;
+  right: 2rem;
+  font-size: 4rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+.modalHeader {
+  font-size: 2.45rem;
+  margin-bottom: 4.5rem;
+  line-height: 1.5;
+}
+
+.highlight {
+  position: relative;
+}
+
+.highlight::after {
+  display: block;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: 0.7;
+  transform: scale(1.07, 1.05) skewX(-15deg);
+  background-image: linear-gradient(to top left, #39b385, #9be15d);
+}
+
+.modalForm {
+  margin: 0 1.2rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.modalForm select {
+  border-radius: 14px;
+  padding: 6px 12px;
+}
+
+.btn {
+  display: inline-block;
+  background-color: #5ec576;
+  font-size: 1.1rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1rem 2.5rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.btn:hover {
+  background-color: #4bbb7d;
+}
+
+.input {
+  font-size: 1rem;
+  padding: 1rem 1.5rem;
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+}
+
+.label {
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  z-index: 100;
+  transition: all 0.5s;
+}
+
+.inputContainer {
+  position: relative;
+}
+
+.inputContainer i {
+  position: absolute;
+  top: 50%;
+  right: 12px;
+  transform: translateY(-50%);
+}
+
+.categoriesForm {
+  display: flex;
+  gap: 12px;
+  margin-left: -36px;
+}
+
+.categoriesForm button {
+  transform: translateY(10%);
+}
+
+.editSubmitBtns {
+  transform: translateY(25%);
+}
+
+.comments {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.comment {
+  border: 1px solid gray;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.username {
+  font-weight: bold;
+}
+
+.alreadyUser {
+  display: flex;
+  gap: 12px;
+  position: absolute;
+  right: 17%;
+  bottom: 12%;
+}

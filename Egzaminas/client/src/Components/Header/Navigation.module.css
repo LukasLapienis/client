@@ -1,0 +1,47 @@
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  width: 100%;
+  padding: 0 3rem;
+  z-index: 100;
+  border-bottom: 1px solid #ddd;
+  /* background-color: #d7ffe9; */
+  margin-bottom: 32px;
+}
+
+.navLogo {
+  height: 4.5rem;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btnContainer {
+  display: flex;
+  gap: 1rem;
+}
+
+.btnSign,
+.btnLogin {
+  font-size: 1.1rem;
+  transition: all 0.3s;
+  padding: 0.8rem 1.6rem;
+  border-radius: 3rem;
+  color: #222;
+  border: none;
+  cursor: pointer;
+}
+
+.btnSign {
+  background-color: #5ec576;
+}
+
+.loggedUsername {
+  display: flex;
+  gap: 12px;
+}
+
+.loggedUsername h4 {
+  transform: translateY(25%);
+}

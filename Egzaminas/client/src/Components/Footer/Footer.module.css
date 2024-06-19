@@ -1,0 +1,40 @@
+.footer {
+  height: 300px;
+  padding: 2rem 2rem;
+  background-color: #37383d;
+  width: 100%;
+  margin-top: auto;
+}
+
+.footerNav {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+  
+}
+
+.footerItem {
+  margin-right: 36px;
+  
+}
+
+.footerLink,
+.footerBrand {
+  font-size: 16px;
+  color: #eee;
+}
+
+.footerLogo {
+  height: 120px;
+  display: block;
+  margin: 0 auto;
+  margin-bottom: 10px;
+}
+
+.footerCopyright {
+  font-size: 16px;
+  color: #aaa;
+  text-align: center;
+}
+
